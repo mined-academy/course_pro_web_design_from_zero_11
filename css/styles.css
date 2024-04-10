@@ -74,3 +74,51 @@ header .texts h3 {
     font-size: 25px;
     font-style: italic;
 }
+
+/* MAIN */
+
+.main {
+    background: url('../img/bg-texture.png');
+    background-repeat: repeat;
+}
+
+.main .about .container {
+    overflow: visible;
+    position: relative;
+}
+
+.main .about .photo {
+    width: 80%;
+    position: absolute;
+    left: 0;
+    top: -50px;
+    z-index: 0;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .35);
+}
+
+.main .about .photo img {
+    vertical-align: top;
+    width: 100%;
+}
+
+.main .about article {
+    background: #fff;
+    padding: 40px;
+    width: 50%;
+    position: relative;
+    top: 300px;
+    z-index: 1;
+    float: right;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .35);
+}
+
+.main .about article h3 {
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.main .about article p {
+    line-height: 28px;
+    margin-bottom: 15px;
+}
