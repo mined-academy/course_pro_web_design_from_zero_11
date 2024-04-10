@@ -1,110 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,300italic,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/styles.css">
-    <title>{{ title }}</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,300italic,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/styles.css">
+	<title>{{titleLeft}} {{titleRight}}</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav class="menu">
-                <a href="#" id="btn-about">About</a>
-                <a href="#" id="btn-menu">Menu</a>
-                <a href="#" id="btn-gallery">Gallery</a>
-                <a href="#" id="btn-address">Address</a>
-            </nav>
+	<header>
+		<div class="container">
+			<nav class="menu">
+				<a href="#" id="btn-about">About</a>
+				<a href="#" id="btn-menu">Menu</a>
+				<a href="#" id="btn-gallery">Gallery</a>
+				<a href="#" id="btn-address">Address</a>
+			</nav>
 
-            <div class="texts">
-                <h1 class="name">Cafe <span>MINED</span></h1>
-                <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
-            </div>
-        </div>
-    </header>
+			<div class="texts">
+				<h1 class="name">{{titleLeft}} <span>{{titleRight}}</span></h1>
+				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+			</div>
+		</div>
+	</header>
 
-    <section class="main">
-        <section class="about" id="about">
-            <div class="container">
-                <div class="photo">
-                    <img src="img/about.jpg" alt="">
-                </div>
-                <article>
-                    <h3>About</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                </article>
-            </div>
-        </section>
+	<section class="main">
+		<section class="about" id="about">
+			<div class="container">
+				<div class="photo">
+					<img src="img/about.jpg" alt="">
+				</div>
+				<article>
+					<h3>About</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+				</article>
+			</div>
+		</section>
 
-        <section class="menu">
-            <div class="container">
-                <h3 class="title" id="meals">Menu</h3>
-                <div class="menu-container">
-                    <div class="menu-container2">
-                        <article>
-                            <p class="category">Foods</p>
-                            {{#foods}}
-                            <div class="meal">
-                                <p class="name">{{name}}</p>
-                                <p class="price">${{price}}</p>
-                                <p class="description">{{description}}</p>
-                            </div>
-                            {{/foods}}
-                        </article>
+		<section class="menu">
+			<div class="container">
+				<h3 class="title" id="dishes">Menu</h3>
+				<div class="menu-container-lvl-1">
+					<div class="menu-container-lvl-2">
+						<article>
+							<p class="category">Foods</p>
+							{{#foods}}
+							<div class="dish">
+								<p class="name">{{name}}</p>
+								<p class="price">{{price}}</p>
+								<p class="description">{{description}}</p>
+							</div>
+							{{/foods}}
+						</article>
+						
+						<article>
+							<p class="category">Drinks</p>
+							{{#drinks}}
+							<div class="dish">
+								<p class="name">{{name}}</p>
+								<p class="price">{{price}}</p>
+								<p class="description">{{description}}</p>
+							</div>
+							{{/drinks}}							
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
 
-                        <article>
-                            <p class="category">Drinks</p>
-                            {{#drinks}}
-                            <div class="meal">
-                                <p class="name">{{name}}</p>
-                                <p class="price">${{price}}</p>
-                                <p class="description">{{description}}</p>
-                            </div>
-                            {{/drinks}}
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
+		<section class="gallery" id="gallery">
+			{{#photos}}
+			<div class="photo">
+				<img src="img/{{.}}.jpg" alt="">
+			</div>
+			{{/photos}}
+		</section>
 
-        <section class="gallery" id="gallery">
-            {{#photos}}
-            <div class="photo">
-                <img src="img/{{.}}.jpg" alt="">
-            </div>
-            {{/photos}}           
-        </section>
+		<section class="address" id="address">
+			<div class="container">
+				<h3 class="title">Address</h3>
+				<div class="address">
+					<p class="street">2915 Primrose Lane<br />Anaheim, CA 92806</p>
+					<p class="phone">(503) 400-5479</p>
+					<p class="mail">luisv@mined.academy</p>
+				</div>
+				<div class="schedule">
+					<h4>Schedule</h4>
+					<p class="workdays">Monday to Friday<br />8:00am - 9:00pm</p>
+					<p class="weekends">Saturday and Sunday<br />11:00am - 11:00pm</p>
+				</div>
+			</div>
+		</section>
 
-        <section class="address" id="address">
-            <div class="container">
-                <h3 class="title">Address</h3>
-                <div class="address-detail">
-                    <p class="street">2915 PrimroseLane<br />Anaheim, CA 92006</p>
-                    <p class="phone">(503) 400-5479</p>
-                    <p class="mail">luisv@mined.academy</p>
-                </div>
+		<section class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d3733.3836847970842!2d-103.39386822512469!3d20.653963595389975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d20.6544405!2d-103.391583!5e0!3m2!1ses!2smx!4v1460436070427" width="1600" height="552" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</section>
+	</section>
 
-                <div class="schedule">
-                    <h4>Schedule</h4>
-                    <p class="workdays">Monday to Friday <br /> 8:00am - 9:00pm</p>
-                    <p class="weekends">Saturday and Sunday <br /> 11:00am - 11:00pm</p>
-                </div>
-            </div>
-        </section>
+	<footer>
+		<div class="container">
+			<div class="copyright">
+				<p>Copyright {{titleLeft}} {{titleRight}}</p>
+			</div>
+		</div>
+	</footer>
 
-        <section class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d3733.3836847970842!2d-103.39386822512469!3d20.653963595389975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d20.6544405!2d-103.391583!5e0!3m2!1ses!2smx!4v1460436070427" width="1600" height="552" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </section>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="copyright">
-                <p>Copyright MINED @ 2024</p>
-            </div>
-        </div>
-    </footer>
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/parallax.js"></script>
+	<script src="js/effects.js"></script>
 </body>
 </html>
