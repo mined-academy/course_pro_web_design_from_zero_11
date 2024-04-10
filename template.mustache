@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,300italic,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/styles.css">
-    <title>Cafe MINED</title>
+    <title>{{ title }}</title>
 </head>
 <body>
     <header>
@@ -45,50 +45,24 @@
                     <div class="menu-container2">
                         <article>
                             <p class="category">Foods</p>
+                            {{#foods}}
                             <div class="meal">
-                                <p class="name">Spaghetti Carbonara</p>
-                                <p class="price">$12.99</p>
-                                <p class="description">Praesent gravida, augue sit amet dignissim rutrum, enim tellus suscipit risus.</p>
+                                <p class="name">{{name}}</p>
+                                <p class="price">${{price}}</p>
+                                <p class="description">{{description}}</p>
                             </div>
-                            <div class="meal">
-                                <p class="name">Margherita Pizza</p>
-                                <p class="price">$10.5</p>
-                                <p class="description">Praesent gravida, augue sit amet dignissim rutrum, enim tellus suscipit risus.</p>
-                            </div>
-                            <div class="meal">
-                                <p class="name">Caesar Salad</p>
-                                <p class="price">$8.75</p>
-                                <p class="description">Praesent gravida, augue sit amet dignissim rutrum, enim tellus suscipit risus.</p>
-                            </div>
-                            <div class="meal">
-                                <p class="name">Caesar Salad 123</p>
-                                <p class="price">$5.75</p>
-                                <p class="description">Praesent gravida, augue sit amet dignissim rutrum, enim tellus suscipit risus.</p>
-                            </div>
+                            {{/foods}}
                         </article>
 
                         <article>
                             <p class="category">Drinks</p>
+                            {{#drinks}}
                             <div class="meal">
-                                <p class="name">Spaghetti Carbonara</p>
-                                <p class="price">$12.99</p>
-                                <p class="description">Praesent gravida, augue sit amet dignissim rutrum, enim tellus suscipit risus.</p>
+                                <p class="name">{{name}}</p>
+                                <p class="price">${{price}}</p>
+                                <p class="description">{{description}}</p>
                             </div>
-                            <div class="meal">
-                                <p class="name">Margherita Pizza</p>
-                                <p class="price">$10.5</p>
-                                <p class="description">Praesent gravida, augue sit amet dignissim rutrum, enim tellus suscipit risus.</p>
-                            </div>
-                            <div class="meal">
-                                <p class="name">Caesar Salad</p>
-                                <p class="price">$8.75</p>
-                                <p class="description">Praesent gravida, augue sit amet dignissim rutrum, enim tellus suscipit risus.</p>
-                            </div>
-                            <div class="meal">
-                                <p class="name">Caesar Salad 123</p>
-                                <p class="price">$5.75</p>
-                                <p class="description">Praesent gravida, augue sit amet dignissim rutrum, enim tellus suscipit risus.</p>
-                            </div>
+                            {{/drinks}}
                         </article>
                     </div>
                 </div>
@@ -96,30 +70,11 @@
         </section>
 
         <section class="gallery" id="gallery">
+            {{#photos}}
             <div class="photo">
-                <img src="img/1.jpg" alt="">
+                <img src="img/{{.}}.jpg" alt="">
             </div>
-            <div class="photo">
-                <img src="img/2.jpg" alt="">
-            </div>
-            <div class="photo">
-                <img src="img/3.jpg" alt="">
-            </div>
-            <div class="photo">
-                <img src="img/4.jpg" alt="">
-            </div>
-            <div class="photo">
-                <img src="img/5.jpg" alt="">
-            </div>
-            <div class="photo">
-                <img src="img/6.jpg" alt="">
-            </div>
-            <div class="photo">
-                <img src="img/7.jpg" alt="">
-            </div>
-            <div class="photo">
-                <img src="img/8.jpg" alt="">
-            </div>
+            {{/photos}}           
         </section>
 
         <section class="address" id="address">
